@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Consolas', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #191919;
+    color: #ffffff;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Windows system scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #1f1f1f;
+  border-left: 1px solid #2d2d2d;
+}
+::-webkit-scrollbar-thumb {
+  background: #4d4d4d;
+  border: 2px solid #1f1f1f;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #666666;
+}
+
+/* Crisp Retro Pixelated Canvas */
+.pixelated-canvas,
+.pixelated-canvas canvas,
+canvas.pixelated-canvas {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  15%, 55% { transform: translateX(-8px); }
+  35%, 75% { transform: translateX(8px); }
+}
+
+.animate-shake {
+  animation: shake 0.42s ease-in-out;
+}
+
+@keyframes moneyPop {
+  0% {
+    opacity: 0;
+    transform: translateY(22px) scale(0.72);
+  }
+  14% {
+    opacity: 1;
+    transform: translateY(0) scale(1.08);
+  }
+  24% {
+    transform: translateY(-4px) scale(1.0);
+  }
+  65% {
+    opacity: 1;
+    transform: translateY(-28px) scale(1.0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-76px) scale(0.84);
+  }
+}
+
+.animate-money-pop {
+  animation: moneyPop 2.6s cubic-bezier(0.2, 0.9, 0.3, 1) forwards;
+}
+
+@keyframes deathDarken {
+  0% {
+    background-color: rgba(0, 0, 0, 0.35);
+  }
+  20% {
+    background-color: rgba(0, 0, 0, 0.55);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 1.0);
+  }
+}
+
+.animate-death-darken {
+  animation: deathDarken 3.2s ease-in-out forwards;
+}
+
+@keyframes damageNotice {
+  0% {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+  12% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+  24% {
+    opacity: 1;
+    transform: scale(1.0);
+  }
+  75% {
+    opacity: 1;
+    transform: scale(1.0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.06);
+  }
+}
+
+.animate-damage-notice {
+  animation: damageNotice 1.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+
+
+

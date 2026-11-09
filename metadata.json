@@ -1,0 +1,8 @@
+{
+  "name": "Simulator 2",
+  "description": "3D open-world city simulation with high-speed vehicles, aircraft dogfights, natural disasters, AI pedestrian chats, and physics destruction.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
